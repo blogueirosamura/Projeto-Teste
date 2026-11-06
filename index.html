@@ -1,30 +1,225 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site sobre Harbour (Teste)</title>
+    <title>Blogueiro Samurai | Tecnologia & Sistemas</title>
+    <meta name="description" content="Artigos semanais sobre computação, tecnologia e desenvolvimento de sistemas para micro e pequenas empresas.">
+    <style>
+        /* Variáveis de Cores - Estilo Clean / Minimalista */
+        :root {
+            --bg-principal: #ffffff;
+            --texto-principal: #1a1a1a;
+            --texto-secundario: #666666;
+            --linha: #e5e5e5;
+            --destaque: #2563eb; /* Azul corporativo sutil */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-principal);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            border-bottom: 1px solid var(--linha);
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 680px; /* Largura ideal para leitura confortável */
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: var(--texto-principal);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--texto-secundario);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--texto-principal);
+        }
+
+        main {
+            padding: 4rem 0;
+        }
+
+        .intro {
+            margin-bottom: 4rem;
+        }
+
+        .intro h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            color: var(--texto-secundario);
+            font-size: 1.15rem;
+        }
+
+        .lista-artigos {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        .item-artigo {
+            text-decoration: none;
+            display: block;
+            group;
+        }
+
+        .meta-artigo {
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+            margin-bottom: 0.5rem;
+        }
+
+        .item-artigo h2 {
+            color: var(--texto-principal);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        /* Efeito sutil ao passar o mouse no artigo */
+        .item-artigo:hover h2 {
+            color: var(--destaque);
+        }
+
+        .item-artigo p {
+            color: var(--texto-secundario);
+            font-size: 1rem;
+        }
+
+        #contato {
+            margin-top: 6rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--linha);
+        }
+
+        #contato h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        #contato p {
+            color: var(--texto-secundario);
+            margin-bottom: 1.5rem;
+        }
+
+        .email-link {
+            color: var(--destaque);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .email-link:hover {
+            border-color: var(--destaque);
+        }
+
+        footer {
+            padding: 4rem 0 2rem 0;
+            font-size: 0.85rem;
+            color: var(--texto-secundario);
+            text-align: center;
+        }
+    </style>
+</head>
 <body>
-    <main>
-        <header>
-                <h1>Cursos Gratis</h1>
 
-        </header>
-        <article>
-                <h2>Curdo de Harbour e xBase</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quo ea officia eius blanditiis quod sit earum, aperiam quae debitis ducimus consectetur id! Laudantium iure voluptatem aut, suscipit illo commodi.</p>
-        </article>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#">Blogueiro Samurai</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Artigos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <article>
-            <h2>Curso de Basic com MSX</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt veritatis voluptatum ipsum eos aliquam ipsam fuga ad et atque sapiente nulla animi quos libero quisquam maiores, in nihil excepturi praesentium?</p>
+    <main class="container">
+        <section class="intro">
+            <h1>Artigos semanais sobre tecnologia.</h1>
+            <p>Computação robusta e desenvolvimento de sistemas explicados de forma simples para micro e pequenas empresas.</p>
+        </section>
 
-        </article>
+        <section id="artigos" class="lista-artigos">
+            
+            <!-- Artigo 1 -->
+            <a href="artigos/site-profissional-oficina.html" class="item-artigo">
+                <div class="meta-artigo">05 de Novembro de 2026</div>
+                <h2>A Importância de um Site Profissional para Oficinas Mecânicas</h2>
+                <p>Como a presença digital correta pode transformar o fluxo de clientes de negócios locais e gerar autoridade imediata no mercado.</p>
+            </a>
 
+            <!-- Artigo 2 -->
+            <a href="artigos/inteligencia-artificial-desenvolvimento.html" class="item-artigo">
+                <div class="meta-artigo">27 de Outubro de 2026</div>
+                <h2>Inteligência Artificial na Criação de Sistemas: O Estagiário Ideal</h2>
+                <p>Uma análise prática sobre como a IA atua como uma ferramenta colaborativa que auxilia e impulsiona o programador, sem substituir o fator humano.</p>
+            </a>
 
+        </section>
 
+        <section id="contato">
+            <h2>Precisa de um sistema ou site sob medida?</h2>
+            <p>Desenvolvo soluções personalizadas com foco em agilidade, performance e resultados reais para o seu negócio.</p>
+            <a href="mailto:contato@blogueirosamurai.com.br" class="email-link">contato@blogueirosamurai.com.br &rarr;</a>
+        </section>
     </main>
-    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Blogueiro Samurai. Escrito semanalmente.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
